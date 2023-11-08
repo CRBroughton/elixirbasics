@@ -15,9 +15,8 @@ defmodule AllStrings do
   def initials(fullName) do
     list = String.split(fullName)
 
-    Enum.map(list, fn name ->
-      initial(name)
-    end)
+    list
+    |> Enum.map(fn name -> initial(name) end)
     |> List.to_string()
     |> String.trim()
   end
