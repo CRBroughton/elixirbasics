@@ -2,8 +2,8 @@ defmodule AllStrings do
   @spec firstLetter(String.t()) :: String.t()
   def firstLetter(value) do
     value
-    |>String.trim()
-    |>String.first()
+    |> String.trim()
+    |> String.first()
   end
 
   @spec initial(String.t()) :: String.t()
