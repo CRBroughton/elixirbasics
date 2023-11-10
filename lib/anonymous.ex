@@ -1,5 +1,9 @@
 defmodule Anonymous do
 
+  @spec getEquipmentList() :: [
+          :grappling_hook | :probe | :snacks | :space_helmet | :space_suit,
+          ...
+        ]
   def getEquipmentList do
     [:space_helmet, :space_suit, :snacks, :grappling_hook, :probe]
   end
