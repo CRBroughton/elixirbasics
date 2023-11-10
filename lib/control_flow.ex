@@ -41,7 +41,7 @@ defmodule ControlFlow do
 
   defp convertKGtoLB(kg), do: kg * 2.2
 
-  @spec equipmentCheck(%Equipment{}) :: :equipment_cleared | :failed
+  @spec equipmentCheck(Equipment.t()) :: :equipment_cleared | :failed
   def equipmentCheck(equipment) do
     case equipment do
       %Equipment{
