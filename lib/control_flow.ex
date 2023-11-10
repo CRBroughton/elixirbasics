@@ -44,7 +44,7 @@ defmodule ControlFlow do
   @spec equipmentCheck(%Equipment{}) :: :equipment_cleared | :failed
   def equipmentCheck(equipment) do
     case equipment do
-      %{
+      %Equipment{
         weight: weight,
         unit_type: unit_type,
         quantity: quantity
@@ -52,7 +52,7 @@ defmodule ControlFlow do
       when weight / quantity < 16 and unit_type == :kg ->
         :equipment_cleared
 
-      %{
+      %Equipment{
         weight: weight,
         unit_type: unit_type,
         quantity: quantity
